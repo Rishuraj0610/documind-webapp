@@ -1,0 +1,6 @@
+{
+  "name": "DocuMind",
+  "description": "An interactive document chat application supporting multiple file formats (PDF, DOCX, TXT, MD, CSV, PPTX, and Images with OCR) with source tracing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

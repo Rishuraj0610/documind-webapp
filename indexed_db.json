@@ -1,0 +1,36 @@
+{
+  "documents": [],
+  "chunks": [],
+  "chatHistory": [],
+  "memorySummary": "",
+  "auditLogs": [
+    {
+      "id": "log_00ztc6l",
+      "timestamp": 1783526823681,
+      "action": "Welcome Email Transmitted",
+      "details": "Dispatched registration welcome email to test@test.com.",
+      "severity": "success"
+    },
+    {
+      "id": "log_ekg5xb5",
+      "timestamp": 1783526820682,
+      "action": "Research Identity Created",
+      "details": "Secure user credentials registered for 'testuser' with email verification active.",
+      "severity": "success"
+    }
+  ],
+  "ephemeralMode": false,
+  "users": [
+    {
+      "id": "usr_soxycb7",
+      "username": "testuser",
+      "email": "test@test.com",
+      "passwordHash": "9f735e0df9a1ddc702bf0a1a7b83033f9f7153a00c29de82cedadc9957289b05",
+      "createdAt": 1783526820681,
+      "premiumEnabled": true
+    }
+  ],
+  "userSessions": [],
+  "userChats": [],
+  "userMemories": {}
+}
