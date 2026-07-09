@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/index.ts": {
-      "includeFiles": "indexed_db.json"
+      "includeFiles": ["dist/server.cjs", "indexed_db.json"]
     }
   },
   "rewrites": [

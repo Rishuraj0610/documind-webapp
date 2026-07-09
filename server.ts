@@ -99,9 +99,9 @@ interface DBState {
 }
 
 const isVercel = !!process.env.VERCEL;
-const DB_FILE = isVercel 
+const DB_FILE = process.env.DATABASE_FILE_PATH || (isVercel 
   ? path.join("/tmp", "indexed_db.json") 
-  : path.join(process.cwd(), "indexed_db.json");
+  : path.join(process.cwd(), "indexed_db.json"));
 
 // Helper to get seed data from local file dynamically
 function getSeedData(): any {
@@ -918,7 +918,7 @@ Return only the 2-sentence summary. Do not include any tags, prefaces, or notes.
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
   // Accept larger payloads for files
   app.use(express.json({ limit: "50mb" }));
@@ -2833,7 +2833,8 @@ Return only the humanized text in your response. No introductory or concluding r
 
   // Serve static assets in production or use Vite middleware in development
   if (process.env.NODE_ENV !== "production" && !process.env.VERCEL) {
-    const { createServer: createViteServer } = await import("vite");
+    const viteModule = "vite";
+    const { createServer: createViteServer } = await import(viteModule);
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
